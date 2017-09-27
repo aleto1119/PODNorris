@@ -25,8 +25,8 @@
       <file leaf-file-name="Exercise1BasicLambdas.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/lessons/lambda/basic/Exercise1BasicLambdas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40270728">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.7986464">
+              <caret line="168" column="26" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -43,6 +43,13 @@
     </option>
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/java/lessons/lambda/basic/Exercise1BasicLambdas.java" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -445,8 +452,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/java/lessons/lambda/basic/Exercise1BasicLambdas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40270728">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.7986464">
+          <caret line="168" column="26" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
           <folding />
         </state>
       </provider>
