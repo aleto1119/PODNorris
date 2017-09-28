@@ -1,5 +1,7 @@
 package com.java.lessons.lambda.basic;
 
+import com.java.lessons.lambda.basic.utils.Utils;
+
 import java.util.*;
 
 /**
@@ -16,6 +18,7 @@ public class Exercise1BasicLambdas {
         new Exercise1BasicLambdas().sortArrayAlphabeticallyUsingObscureLambdaWay();
         new Exercise1BasicLambdas().sortArrayContainingEFirstUsingNiceClassicWay();
         new Exercise1BasicLambdas().sortArrayContainingEFirstUsingObscureLambdaWay();
+        new Exercise1BasicLambdas().sortArrayContainingEFirstUsingObscureLambdaWayAndUtilsClass();
     }
 
     public void sortArrayByLenghtUsingNiceClassicWay() {
@@ -145,6 +148,13 @@ public class Exercise1BasicLambdas {
         printList(sortableList);
     }
 
+    public void sortArrayContainingEFirstUsingObscureLambdaWayAndUtilsClass() {
+        List<String> sortableList = populateList();
+        Collections.sort(sortableList, (String a, String b) -> Utils.compare(a, b));
+        System.out.println("Sorted containing 'e' first with obscure lambda method and utils class");
+        printList(sortableList);
+    }
+
     private List<String> populateList() {
         List<String> list = new ArrayList<>();
 
@@ -162,11 +172,6 @@ public class Exercise1BasicLambdas {
 
     private void printList(List<String> sortedList) {
         System.out.println(Arrays.asList(sortedList));
-    }
-
-    private class Utils {
-
-        //todo util method
     }
 
 }
