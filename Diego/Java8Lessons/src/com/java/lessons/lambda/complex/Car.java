@@ -6,4 +6,5 @@ package com.java.lessons.lambda.complex;
 public class Car {
 
     public int gears;
+    public String brand;
 }

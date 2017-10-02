@@ -10,7 +10,7 @@ public class Exercise2GenericComplexLambdas {
         String a = "Amarillo";
         String b = "Rojo";
 
-        String result = betterEntry(a, b, new TwoElementPredicate<String>() {
+        String result = betterElement(a, b, new TwoElementPredicate<String>() {
             @Override
             public boolean compare(String a, String b) {
                 return a.length() > b.length();
@@ -19,23 +19,33 @@ public class Exercise2GenericComplexLambdas {
 
         System.out.println("Better String with nice classic and pristine way: " + result);
 
-        result = betterEntry(a, b, (Object d , Object e) -> a.length() > b.length() );
+        result = betterElement(a, b, (String d , String e) -> a.length() > b.length() );
         System.out.println("Better String with wtf lambda way: " + result);
 
 
         Car car1 = new Car();
         car1.gears = 5;
+        car1.brand = "VW";
 
         Car car2 = new Car();
         car2.gears = 4;
+        car2.brand = "BMW";
 
 
-        result = betterEntry(car1, car2, (Object d , Object e) -> car1 > car2 );
-        System.out.println("Better Car with wtf lambda way: " + result);
+        Car car3 = betterElement(car1, car2, (Car d , Car e) -> car1.gears > car2.gears );
+        System.out.println("Better Car with wtf lambda way: " + car3.brand);
 
+
+        car3 = betterElement(car1, car2, new TwoElementPredicate<Car>() {
+            @Override
+            public boolean compare(Car a, Car b) {
+                return car1.gears > car2.gears;
+            }
+        });
+        System.out.println("Better Car with nice classic way: " + car3.brand);
     }
 
-    static <T extends Object> T betterEntry(T a, T b, TwoElementPredicate predicate) {
+    static <T extends Object> T betterElement(T a, T b, TwoElementPredicate<T> predicate) {
         if(predicate.compare(a , b)) {
             return a;
         } else {

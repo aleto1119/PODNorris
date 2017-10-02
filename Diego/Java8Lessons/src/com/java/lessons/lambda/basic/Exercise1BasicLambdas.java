@@ -50,6 +50,10 @@ public class Exercise1BasicLambdas {
             } else {
                 return 1;
             }});
+
+
+        Collections.sort(sortableList, (String a, String b) -> a.length() - b.length());
+
         System.out.println("Sorted by length with obscure lambda method");
         printList(sortableList);
     }
